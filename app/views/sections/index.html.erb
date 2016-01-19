@@ -1,0 +1,86 @@
+<p id="notice"><%= notice %></p>
+
+    <!-- <%= @about.title %>
+    <%= @about.headline %>
+    <%= @about.body %>
+    <%= @about.extras %>
+    <%= @about.picture %> -->
+
+<div class="facts">
+  <div class="fact-row" id="one">
+      <div class="row">
+		  <span class='wrap left'><div class="black"></div></span>
+		   <span class="text">
+    <% @facts.order(:id)[3..4].each  do |section| %>
+		 <span><%= section.preview %></span>
+    <% end %>
+	</span>
+		  <span class='wrap right'><div class="black"></div></span>
+      </div>
+  </div>
+  <div class="fact-row" id="two">
+      <div class="row">
+		  <span class='wrap left one'><div class="black"></div></span>
+		   <span class="text">
+    <% @facts[1..1].each  do |section| %>
+		 <span><%= section.preview %></span>
+    <% end %>
+	</span>
+		  <span class='wrap two right'><div class="black"></div></span>
+      </div>
+  </div>
+  <div class="fact-row" id="title">
+      <div class="row">
+		  <span class="text">
+    <% @facts.order(:id)[4..5].each do |section| %>
+		  <span><%= section.title %></span>
+    <% end %>
+	</span>
+      </div>
+  </div>
+  <div class="fact-row" id="three">
+      <div class="row">
+		  <span class="text">
+    <% @facts.order(:id)[2..2].each  do |section| %>
+		  <span><%= section.preview %></span>
+    <% end %>
+	</span>
+		  <span class='wrap right'><div class="black"></div></span>
+      </div>
+  </div>
+
+  <div class="fact-row" id="three">
+      <div class="row">
+		  <span class="text">
+    <% @facts.order(:id)[2..3].each  do |section| %>
+		  <span><%= section.preview %></span>
+    <% end %>
+	</span>
+		  <span class='wrap right'><div class="black"></div></span>
+      </div>
+  </div>
+  <div class="fact-row" id="two">
+      <div class="row">
+		  <span class='wrap left'><div class="black"></div></span>
+		   <span class="text">
+    <% @facts[1..1].each  do |section| %>
+		 <span><%= section.preview %></span>
+    <% end %>
+	</span>
+		  <span class='wrap two'><div class="black"></div></span>
+      </div>
+  </div>
+  <div class="fact-row" id="one">
+      <div class="row">
+		  <span class='wrap'><div class="black"></div></span>
+		   <span class="text">
+    <% @facts.order(:id)[3..4].each  do |section| %>
+		 <span><%= section.preview %></span>
+    <% end %>
+	</span>
+		  <span class='wrap'><div class="black"></div></span>
+      </div>
+  </div>
+
+
+  </div>
