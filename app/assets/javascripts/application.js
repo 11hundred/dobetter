@@ -17,7 +17,7 @@
 
 
 	$(window).load(function(){
-			$('#title span:nth-child(1)').after('<div class="site-title"><div class="illinois"></div><h3>We can do better illinois</h3></div>')
+			$('#title span:nth-child(1)').after('<div class="site-title"><div class="illinois"></div><h3>We can do better illinois.</h3></div>')
 	});
 
 
