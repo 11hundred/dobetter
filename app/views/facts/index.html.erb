@@ -1,9 +1,23 @@
 <% @facts.each_with_index do |fact, index| %>
 <section class="cd-section<% if index == 0 %> visible<% end %>">
-	<div class="poster">
-		<h2><%= fact.title %></h2>
-		<!--<p><%= fact.preview %></p>-->
-	</div>
+		<div>
+			<div class="poster-content">
+				<div class="poster">
+					<h2>STATE OF THE STATE</h2>
+					<h1>FACT: <%= fact.title  %></h1>
+					<div class="do-better">
+						<h3>We can do better illinois.</h3>
+					</div>	
+					<div class="poster-nav">
+						<a href="#"><%= @who.title %></a>
+						<a href="#"><%= @about.title %></a>
+						<a href="#"><%= @involved.title %></a>
+					</div>	
+					
+				</div>
+			</div>
+			
+		</div>
 </section>
 <% end %>
 <nav>
@@ -12,3 +26,4 @@
 		<li><a href="#0" class="cd-next">Prev</a></li>
 	</ul>
 </nav> <!-- .cd-vertical-nav -->
+

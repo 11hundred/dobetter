@@ -12,8 +12,9 @@ html, body {
  margin: 0px;
  padding: 0px;
  font-size:14px;
- background:#ff0000;
- background:#FDD600;
+background-image: url(craft-02.jpg);
+background-repeat:repeat;
+background-position:center;
  font-family: 'Verlag A', 'Verlag B'; font-weight: 200; font-style: normal;
  font-family: "Knockout 70 A", "Knockout 70 B";
  font-style: normal;
@@ -230,6 +231,9 @@ Main Components
 -------------------------------- */
 
 body[data-hijacking="on"] {
+	background-image: url(craft-02.jpg);
+	background-repeat:repeat;
+	background-position:center;
 
 	@include MQ(L) {
 		overflow: hidden;
@@ -240,13 +244,78 @@ body[data-hijacking="on"] {
 	height: 100vh;
 
 	h2 {
-		line-height: 100vh;
-		text-align: center;
-		font-size: 2.4rem;
+		font-family: "Gotham SSm A", "Gotham SSm B";
+		font-style: normal;
+		font-weight: 700;
+		text-align: left;
+		text-transform:uppercase;
+		font-size:1rem;
+	}
+	.do-better{
+		background:#FBAF3F;
+		position:absolute;
+		bottom:250px;
+		padding:25px;
+		width: 325px;
+		height: 90px;
+		left:-100px;
+	    background-image: url(illinois.png);
+	    background-repeat: no-repeat;
+	    background-position: 10px center;
+		background-size:70px;
+	    -ms-transform: rotate(2deg); /* IE 9 */
+	    -webkit-transform: rotate(2deg); /* Chrome, Safari, Opera */
+	    transform: rotate(2deg);
+		border-top:1px solid rgba(255,255,255,0.2);
+		border-bottom:1px solid rgba(0,0,0,0.2);
+		box-shadow:1px 2px 2px rgba(0,0,0,0.2);
+		
+		h3 {
+				position: relative;
+				    left: 70px;
+				    top: -8px;
+				    font-size: 30px;
+				    width: 220px;
+				    text-align: left;
+				    line-height: 25px;
+				    color: #fff;
+					text-transform:uppercase;
+				    font-family: "Knockout 70 A", "Knockout 70 B";
+				    font-style: normal;
+				    font-weight: 400;
+				}
+		
+	}
+	.poster-nav {
+		top:375px;
+		border-top:5px solid #111;
+		padding-top:10px;
+		width:350px;
+		position:absolute;
+		a {
+			text-transform:uppercase;
+			text-decoration:none;
+			width:100%;
+			font-size: 1.15em;
+			    float: left;
+			    font-family: "Ziggurat A", "Ziggurat B";
+			    font-style: normal;
+			    font-weight: 800;
+			    padding: 5px 0;
+			    letter-spacing: 0.05em;
+		}
 	}
 
 	&:first-of-type > div {
-		background-color: $color-1;
+		background-image: url(craft-02.jpg);
+		background-repeat:repeat;
+		background-position:center;
+		.do-better{
+			left:85px;
+		    -ms-transform: rotate(-1deg); /* IE 9 */
+		    -webkit-transform: rotate(-1deg); /* Chrome, Safari, Opera */
+		    transform: rotate(-1deg);
+		}
 
 		&::before {
 			/* alert -> all scrolling effects are not visible on small devices */
@@ -264,64 +333,101 @@ body[data-hijacking="on"] {
 	}
 
 	&:nth-of-type(2) > div {
-		background-color: $color-2;
+		background-image: url(craft-01.jpg);
+		background-repeat:repeat;
+		background-position:center;
+		.do-better{
+		    -ms-transform: rotate(2deg); /* IE 9 */
+		    -webkit-transform: rotate(2deg); /* Chrome, Safari, Opera */
+		    transform: rotate(2deg);
+		}
+				
 	}
 
 	&:nth-of-type(3) > div {
-		background-color: $color-3;
+		background-image: url(craft-02.jpg);
+		background-repeat:repeat;
+		background-position:center;
+		.do-better{
+		    left: 200px;
+		    -ms-transform: rotate(-1deg); /* IE 9 */
+		    -webkit-transform: rotate(-1deg); /* Chrome, Safari, Opera */
+		    transform: rotate(-1deg);
+		}
 	}
 
 	&:nth-of-type(4) > div {
-		background-color: $color-4;
+		background-image: url(craft-01.jpg);
+		background-repeat:repeat;
+		background-position:center;
+		.do-better{
+		    left:-10px;
+		    -ms-transform: rotate(1deg); /* IE 9 */
+		    -webkit-transform: rotate(1deg); /* Chrome, Safari, Opera */
+		    transform: rotate(1deg);
+		}
 	}
 
 	&:nth-of-type(5) > div {
-		background-color: $color-5;
+		background-image: url(craft-02.jpg);
+		background-repeat:repeat;
+		background-position:center;
+		.do-better{
+		    -ms-transform: rotate(1.4deg); /* IE 9 */
+		    -webkit-transform: rotate(1.4deg); /* Chrome, Safari, Opera */
+		    transform: rotate(1.4deg);
+		}
+	}
+	&:nth-of-type(6) > div {
+		background-image: url(craft-01.jpg);
+		background-repeat:repeat;
+		background-position:center;
+	}
+	&:nth-of-type(7) > div {
+		background-image: url(craft-01.jpg);
+		background-repeat:repeat;
+		background-position:center;
 	}
 
-	[data-animation="parallax"] & > div,
-	[data-animation="fixed"] & > div,
-	[data-animation="opacity"] & > div {
-		background-position: center center;
+
+	.poster-content {
+		position:relative;
+		height:100vh;
+		width:100%;
+	}
+
+	.poster {
+		width:400px;
+		height:600px;
+		margin:0 auto;
+		position:absolute;
+		left:50%;
+		top:50%;
+		padding:50px 25px;
+		margin-left:-200px;
+		margin-top:-300px;
+		background-image: url(poster-art.png);
 		background-repeat: no-repeat;
-		background-size: cover;
+		background-position:center;
+		background-size:cover;
 	}
 
-	[data-animation="parallax"] &:first-of-type > div,
-	[data-animation="fixed"] &:first-of-type > div,
-	[data-animation="opacity"] &:first-of-type > div {
-		background-image: url('../img/img-1.jpg');
-	}
 
-	[data-animation="parallax"] &:nth-of-type(2) > div,
-	[data-animation="fixed"] &:nth-of-type(2) > div,
-	[data-animation="opacity"] &:nth-of-type(2) > div {
-		background-image: url('../img/img-2.jpg');
-	}
 
-	[data-animation="parallax"] &:nth-of-type(3) > div,
-	[data-animation="fixed"] &:nth-of-type(3) > div,
-	[data-animation="opacity"] &:nth-of-type(3) > div {
-		background-image: url('../img/img-3.jpg');
-	}
-
-	[data-animation="parallax"] &:nth-of-type(4) > div,
-	[data-animation="fixed"] &:nth-of-type(4) > div,
-	[data-animation="opacity"] &:nth-of-type(4) > div {
-		background-image: url('../img/img-4.jpg');
-	}
-
-	[data-animation="parallax"] &:nth-of-type(5) > div,
-	[data-animation="fixed"] &:nth-of-type(5) > div,
-	[data-animation="opacity"] &:nth-of-type(5) > div {
-		background-image: url('../img/img-5.jpg');
+	.poster h1 {
+	    font-family: "Knockout 70 A", "Knockout 70 B";
+	    font-style: normal;
+	    font-weight: 400;
+		font-size: 3rem;
+		    text-transform: uppercase;
+		    word-wrap: break-word;
+		
 	}
 
 	@include MQ(L) {
 
 		h2 {
-			font-size: 4rem;
-			font-weight: 300;
+			margin-bottom:10px;
 		}
 
 		[data-hijacking="on"] & {
@@ -409,7 +515,7 @@ body[data-hijacking="on"] {
 		text-indent: 100%;
 		white-space: nowrap;
 
-		background: url(image-url('page-scroll/cd-icon-arrow.svg')) no-repeat center center;
+		background: url('page-scroll/cd-icon-arrow.svg') no-repeat center center;
 
 		&.cd-prev {
 			@include transform(rotate(180deg));

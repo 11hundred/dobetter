@@ -5,6 +5,10 @@ class FactsController < ApplicationController
   # GET /facts.json
   def index
     @facts = Fact.all
+    sections = Section.all
+    @about = sections.find_by(:id => 2)
+    @involved = sections.find_by(:id => 3)
+    @who = sections.find_by(:id => 1)
   end
 
   # GET /facts/1
