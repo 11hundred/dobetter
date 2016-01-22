@@ -12,7 +12,7 @@ html, body {
  margin: 0px;
  padding: 0px;
  font-size:14px;
-background-image: url(craft-02.jpg);
+background-image: url(image-tag(craft-02.jpg));
 background-repeat:repeat;
 background-position:center;
  font-family: 'Verlag A', 'Verlag B'; font-weight: 200; font-style: normal;
@@ -152,7 +152,7 @@ span.wrap.right .black {
  position: absolute;
      width: 160px;
      height: 200px;
-   background-image: url(illinois.png);
+   background-image: url(image-tag(illinois.png));
    background-repeat: no-repeat;
    background-position:center;
 
@@ -231,7 +231,7 @@ Main Components
 -------------------------------- */
 
 body[data-hijacking="on"] {
-	background-image: url(craft-02.jpg);
+	background-image: url(image-tag(craft-02.jpg));
 	background-repeat:repeat;
 	background-position:center;
 
@@ -259,7 +259,7 @@ body[data-hijacking="on"] {
 		width: 325px;
 		height: 90px;
 		left:-100px;
-	    background-image: url(illinois.png);
+	    background-image: url(image-tag(illinois.png));
 	    background-repeat: no-repeat;
 	    background-position: 10px center;
 		background-size:70px;
@@ -307,7 +307,7 @@ body[data-hijacking="on"] {
 	}
 
 	&:first-of-type > div {
-		background-image: url(craft-02.jpg);
+		background-image: url(image-tag(craft-02.jpg));
 		background-repeat:repeat;
 		background-position:center;
 		.do-better{
@@ -333,7 +333,7 @@ body[data-hijacking="on"] {
 	}
 
 	&:nth-of-type(2) > div {
-		background-image: url(craft-01.jpg);
+		background-image: url(image-tag(craft-01.jpg));
 		background-repeat:repeat;
 		background-position:center;
 		.do-better{
@@ -345,7 +345,7 @@ body[data-hijacking="on"] {
 	}
 
 	&:nth-of-type(3) > div {
-		background-image: url(craft-02.jpg);
+		background-image: url(image-tag(craft-02.jpg));
 		background-repeat:repeat;
 		background-position:center;
 		.do-better{
@@ -357,7 +357,7 @@ body[data-hijacking="on"] {
 	}
 
 	&:nth-of-type(4) > div {
-		background-image: url(craft-01.jpg);
+		background-image: url(image-tag(craft-01.jpg));
 		background-repeat:repeat;
 		background-position:center;
 		.do-better{
@@ -369,7 +369,7 @@ body[data-hijacking="on"] {
 	}
 
 	&:nth-of-type(5) > div {
-		background-image: url(craft-02.jpg);
+		background-image: url(image-tag(craft-02.jpg));
 		background-repeat:repeat;
 		background-position:center;
 		.do-better{
@@ -379,12 +379,12 @@ body[data-hijacking="on"] {
 		}
 	}
 	&:nth-of-type(6) > div {
-		background-image: url(craft-01.jpg);
+		background-image: url(image-tag(craft-01.jpg));
 		background-repeat:repeat;
 		background-position:center;
 	}
 	&:nth-of-type(7) > div {
-		background-image: url(craft-01.jpg);
+		background-image: url(image-tag(craft-01.jpg));
 		background-repeat:repeat;
 		background-position:center;
 	}
@@ -406,7 +406,7 @@ body[data-hijacking="on"] {
 		padding:50px 25px;
 		margin-left:-200px;
 		margin-top:-300px;
-		background-image: url(poster-art.png);
+		background-image: url(image-tag(poster-art.png));
 		background-repeat: no-repeat;
 		background-position:center;
 		background-size:cover;
@@ -515,7 +515,7 @@ body[data-hijacking="on"] {
 		text-indent: 100%;
 		white-space: nowrap;
 
-		background: url('page-scroll/cd-icon-arrow.svg') no-repeat center center;
+		background: url(image-tag('page-scroll/cd-icon-arrow.svg')) no-repeat center center;
 
 		&.cd-prev {
 			@include transform(rotate(180deg));
