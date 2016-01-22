@@ -34,6 +34,8 @@ gem 'velocityjs-rails', '~> 2.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'rails_12factor'
+
 gem 'bourbon', '~> 4.2.6'
 
 group :development, :test do
