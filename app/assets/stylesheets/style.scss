@@ -1,223 +1,240 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import "bourbon";
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/layout';
 
+*, *::after, *::before {
+	box-sizing: border-box;
+}
 
 html, body {
-	height: 100%;
-	margin: 0px;
-	padding: 0px;
-	font-size:14px;
-	background:#ff0000;
-	background:#FDD600;
-	font-family: 'Verlag A', 'Verlag B'; font-weight: 200; font-style: normal;
-	font-family: "Knockout 70 A", "Knockout 70 B";
-	font-style: normal;
-	font-weight: 400;
+ height: 100%;
+ margin: 0px;
+ padding: 0px;
+ font-size:14px;
+ background:#ff0000;
+ background:#FDD600;
+ font-family: 'Verlag A', 'Verlag B'; font-weight: 200; font-style: normal;
+ font-family: "Knockout 70 A", "Knockout 70 B";
+ font-style: normal;
+ font-weight: 400;
+ @include font-smoothing;
+
+   &::before {
+       /* never visible - this is used in jQuery to check the current MQ */
+       content: 'mobile';
+       display: none;
+   }
+
+   @include MQ(L) {
+
+       &::before {
+         /* never visible - this is used in jQuery to check the current MQ */
+         content: 'desktop';
+       }
+   }
 }
 
 h1,h2,h3,h4,h5,h6 {
-	margin:0;
-	padding:0;
-	font-size:1em;
-	line-height:1em;
+ margin:0;
+ padding:0;
+ font-size:1em;
+ line-height:1em;
 }
 
 ul {
-	list-style:none;
-	margin:0;
-	padding:0;
+ list-style:none;
+ margin:0;
+ padding:0;
 }
 ul li {
-	float:left;position:relative;
+ float:left;position:relative;
 }
 .fact-row {
-	width:100%;
-	margin:0;
-	padding:0;
-	float:left;
-	height:90px;
+ width:100%;
+ margin:0;
+ padding:0;
+ float:left;
+ height:90px;
 }
 .row {
-	position: absolute;
-	    width: 300%;
-	    left: 0px;
-	    margin-left: -100%;
+ position: absolute;
+     width: 300%;
+     left: 0px;
+     margin-left: -100%;
 }
 #one .row {
-    margin-left: -105%;
-	
+   margin-left: -105%;
+
 }
 #two .row {
-    margin-left: -80%;
-	
+   margin-left: -80%;
+
 }
 .row {
-	font-family: "Knockout 67 A", "Knockout 67 B";
-	font-style: normal;
-	font-weight: 400;	text-transform:uppercase;
-	font-size:9em;
-	line-height: 80px;
-	    text-align: center;
-	    color: #fff;
-	    overflow: hidden;
-	    height: 105px;	
+ font-family: "Knockout 67 A", "Knockout 67 B";
+ font-style: normal;
+ font-weight: 400;	text-transform:uppercase;
+ font-size:9em;
+ line-height: 80px;
+     text-align: center;
+     color: #fff;
+     overflow: hidden;
+     height: 105px;
 }
 #title .row {
-    width: 500%;
-    margin-left: -200%;
-    overflow: visible;
-	z-index:99;
-	
+   width: 500%;
+   margin-left: -200%;
+   overflow: visible;
+ z-index:99;
+
 }
 
 .row span.text span {
-	opacity:0;
+ opacity:0;
 }
 
 .row span.text .site-title {
-	opacity:1;
+ opacity:1;
 }
 
 .fact-row.flipped span.text span {
-	opacity:1;
-	-webkit-transition: opacity .75s;
-	-moz-transition:opacity .75s;
-	-o-transition: opacity .75s;
-	transition: opacity .75s;
+ opacity:1;
+ -webkit-transition: opacity .75s;
+ -moz-transition:opacity .75s;
+ -o-transition: opacity .75s;
+ transition: opacity .75s;
 }
 .fact-row.flipped span.text {
 }
 span.wrap {
-	height:75px;
-	width:500px;
-	position:relative;
-	display:inline-block;
+ height:75px;
+ width:500px;
+ position:relative;
+ display:inline-block;
 }
 span.wrap.two,
 span.wrap.one {
-	height:75px;
-	width:300px;
-	position:relative;
-	display:inline-block;
+ height:75px;
+ width:300px;
+ position:relative;
+ display:inline-block;
 }
 span.wrap .black {
-    position: absolute;
-    height: 83px;
-    background: #fff;
-	    background: rgba(255,255,255,0.4);
-    width: 0px;
-    top: -8px;
+   position: absolute;
+   height: 83px;
+   background: #fff;
+     background: rgba(255,255,255,0.4);
+   width: 0px;
+   top: -8px;
 }
 span.wrap.left .black {
-    right: 0px;
+   right: 0px;
 }
 span.wrap.right .black {
-    left: 0px;
+   left: 0px;
 }
 .flipped span.wrap .black {
-	width:100%;
-	-webkit-transition: width .75s;
-	-moz-transition:width .75s;
-	-o-transition: width .75s;
-	transition: width .75s;
+ width:100%;
+ -webkit-transition: width .75s;
+ -moz-transition:width .75s;
+ -o-transition: width .75s;
+ transition: width .75s;
 }
 .site-title {
-	position:relative;
-    display: inline-block;
-    width: 350px;
-	height:85px;
+ position:relative;
+   display: inline-block;
+   width: 350px;
+ height:85px;
 }
 .site-title .illinois{
-	position: absolute;
-	    width: 160px;
-	    height: 200px;
-		background-image: url(illinois.png);
-		background-repeat: no-repeat;
-		background-position:center;
-		
-	    left: -40px;
-	    top: -60px;	
+ position: absolute;
+     width: 160px;
+     height: 200px;
+   background-image: url(illinois.png);
+   background-repeat: no-repeat;
+   background-position:center;
+
+     left: -40px;
+     top: -60px;
 }
 
 .site-title h3 {
-	color: #111;
-	    position: absolute;
-	    left:130px;
-	    top: -1px;
-	    font-size: 58px;
-	    width: 220px;
-	    text-align: left;
-	    line-height: 42px;
+ color: #111;
+     position: absolute;
+     left:130px;
+     top: -1px;
+     font-size: 58px;
+     width: 220px;
+     text-align: left;
+     line-height: 42px;
 }
 
 .center {
-	max-width:1280px;
-	margin:0 auto;
-	padding:0px;
+ max-width:1280px;
+ margin:0 auto;
+ padding:0px;
 }
 
 .detail {
-	margin:100px auto;
-	float:left;
-	width:100%;
+ margin:100px auto;
+ float:left;
+ width:100%;
 }
 
 .detail h3 {
-	font-family: "Knockout 70 A", "Knockout 70 B";
-	text-transform:uppercase;
-    font-size: 8.5em;
-    color: #111;
-    letter-spacing: 0.03em;
-    text-align: left;
-    line-height: 90px;
-	position:relative;
-	display:block;
-	float:left;
+ font-family: "Knockout 70 A", "Knockout 70 B";
+ text-transform:uppercase;
+   font-size: 8.5em;
+   color: #111;
+   letter-spacing: 0.03em;
+   text-align: left;
+   line-height: 90px;
+ position:relative;
+ display:block;
+ float:left;
 }
 .nav {
-	width:100%;
-	height:85px;
-	position:relative;
+ width:100%;
+ height:85px;
+ position:relative;
 }
 
 .nav span.black {
-    position: absolute;
-    height: 70%;
-    background: #fff;
-    width: 0px;
-    top: 15%;
-	left:2%;
+   position: absolute;
+   height: 70%;
+   background: #fff;
+   width: 0px;
+   top: 15%;
+ left:2%;
 }
 .nav:hover  {
-	cursor:pointer;
+ cursor:pointer;
 }
 
 .nav:hover span.black {
-	width:95%;
+ width:95%;
 }
 
 
-.poster {
-	width:700px;
-	height:900px;
-	
+/*.poster {
+ width:700px;
+ height:900px;
+
+}*/
+
+/* --------------------------------
+
+Main Components
+
+-------------------------------- */
+
+body[data-hijacking="on"] {
+
+	@include MQ(L) {
+		overflow: hidden;
+	}
 }
-
-
-/* Animation */
 
 .cd-section {
 	height: 100vh;
@@ -238,7 +255,7 @@ span.wrap.right .black {
 			width: 100%;
 			text-align: center;
 			top: 20px;
-			z-index: 2;	
+			z-index: 2;
 			font-weight: bold;
 			font-size: 1.3rem;
 			text-transform: uppercase;
@@ -359,7 +376,7 @@ span.wrap.right .black {
 		top: 0;
 		left: 0;
 		width: 100%;
-		
+
 		/* Force Hardware Acceleration */
 		@include transform(translateZ(0));
 		@include backface-visibility(hidden);
@@ -392,7 +409,7 @@ span.wrap.right .black {
 		text-indent: 100%;
 		white-space: nowrap;
 
-		background: url(../img/cd-icon-arrow.svg) no-repeat center center;
+		background: url(image-url('page-scroll/cd-icon-arrow.svg')) no-repeat center center;
 
 		&.cd-prev {
 			@include transform(rotate(180deg));

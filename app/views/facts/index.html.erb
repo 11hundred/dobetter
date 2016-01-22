@@ -1,23 +1,14 @@
-<p id="notice"><%= notice %></p>
-	<div class="Animation-wrapper" data-hijacking="off" data-animation="fixed">
-
-    <% @facts.each do |fact| %>
-
-	<section class="cd-section">
-		<div class="poster">
-			<h2><%= fact.title %></h2>
-			<p><%= fact.preview %></p>
-		</div>
-	</section>
-    <% end %>
-
-</div>
-	<nav>
-		<ul class="cd-vertical-nav">
-			<li><a href="#0" class="cd-prev inactive">Next</a></li>
-			<li><a href="#0" class="cd-next">Prev</a></li>
-		</ul>
-	</nav> <!-- .cd-vertical-nav -->
-
-
-
+<% @facts.each_with_index do |fact, index| %>
+<section class="cd-section<% if index == 0 %> visible<% end %>">
+	<div class="poster">
+		<h2><%= fact.title %></h2>
+		<!--<p><%= fact.preview %></p>-->
+	</div>
+</section>
+<% end %>
+<nav>
+	<ul class="cd-vertical-nav">
+		<li><a href="#0" class="cd-prev inactive">Next</a></li>
+		<li><a href="#0" class="cd-next">Prev</a></li>
+	</ul>
+</nav> <!-- .cd-vertical-nav -->
