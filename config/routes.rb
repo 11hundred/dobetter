@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'download/index'
+
+  get 'download/zip'
+
+  get 'download/pdf'
+
+  get 'download/doc'
+
   resources :participations
 
   resources :actions
@@ -13,8 +21,9 @@ Rails.application.routes.draw do
   get("/who", :controller  => "abouts", :action => "index")
   get("/whats-the-issue", :controller  => "abouts", :action => "index")
   get("/get-involved", :controller  => "participations", :action => "index")
-  get("/get-involved/letter", :controller  => "participations", :action => "letter")
   get("/get-involved/facts", :controller  => "participations", :action => "facts")
+
+  root 'download#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
