@@ -4,6 +4,11 @@ class ParticipationsController < ApplicationController
   # GET /participations
   # GET /participations.json
   def index
+    sections = Section.all
+    @who = sections.find_by(:id => 1)
+    @about = sections.find_by(:id => 2)
+    @involved = sections.find_by(:id => 3)
+    @facts = Fact.all
     @participations = Participation.all
   end
 

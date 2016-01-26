@@ -11,13 +11,52 @@
 </head>
 <body data-hijacking="off" data-animation="fixed">
 <div class="side-col">
+<% if current_page?('/') %>
 	<div class="interior-wrapper">
-		<h3><%= @who.title %></h3>
-		<p><%= @who.body %></p>
-	<h4><%= @about.title %></h4>
-	<h4><%= @involved.title %></h4>
+		<!-- <h3><%= @who.title %></h3> -->
+		<p><span><%= @who.title %></span><%= @who.body %></p>	
+		<ul id="nav">
+			<li><span></span><a href="/whats-the-issue">What is the issue?</a></li>
+			<li><span></span><a href="/get-involved">Get Involved</a></li>
+		</ul>
+	</div>	
+<% elsif current_page?('/whats-the-issue') %>
+	<div class="interior-wrapper">
+		<ul id="nav">
+			<li><span></span><a href="/">Who are We?</a></li>
+			<li class="active"><span></span><a href="/whats-the-issue">What is the issue?</a></li>
+			<li><span></span><a href="/get-involved">Get Involved</a></li>
+		</ul>
 	
 	</div>	
+<% elsif current_page?('/get-involved/letter') %>
+	<div class="interior-wrapper">
+		<ul id="nav">
+	<li><span></span><a href="/">Who are We?</a></li>
+			<li><span></span><a href="/whats-the-issue">What is the issue?</a></li>
+			<li><span></span><a href="/get-involved">Get Involved</a></li>
+		</ul>
+	
+	</div>	
+<% elsif current_page?('/get-involved/facts') %>
+	<div class="interior-wrapper">
+		<ul id="nav">
+	<li><span></span><a href="/">Who are We?</a></li>
+			<li><span></span><a href="/whats-the-issue">What is the issue?</a></li>
+			<li><span></span><a href="/get-involved">Get Involved</a></li>
+		</ul>
+	
+	</div>	
+<% elsif current_page?('/facts') %>
+	<div class="interior-wrapper">
+	<p><span><%= @who.title %></span><%= @who.body %></p>	
+		<ul id="nav">
+			<li><span></span><a href="/">Who are We?</a></li>
+			<li><span></span><a href="/whats-the-issue">What is the issue?</a></li>
+			<li><span></span><a href="/get-involved">Get Involved</a></li>
+		</ul>
+	</div>	
+<% end %>
 	
 	<div class="contacts">
 		<ul>
@@ -26,9 +65,9 @@
 			<li id="pinterest"><a href="pinterest.com/wecandobetteril">Pinterest</a></li>
 			<li id="twitter"><a href="twitter.com/wecandobetteril">Twitter</a></li>
 		</ul>
-		<div class="partnership">
+		<!-- <div class="partnership">
 			<h5>In partnership with:</h5>
-		</div>	
+		</div>	 -->
 	</div>	
 	
 </div>	

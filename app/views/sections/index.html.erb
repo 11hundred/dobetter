@@ -1,84 +1,30 @@
-<p id="notice"><%= notice %></p>
 
+<% @facts.each_with_index do |fact, index| %>
+<section class="cd-section<% if index == 0 %> visible<% end %>">
+		<div>
+			<div class="poster-content">
+				<div class="poster">
+					<h2>STATE OF THE STATE</h2>
+					<h1>FACT: <%= fact.title  %></h1>
+					<!-- <div class="poster-nav">
+						<a href="#"><%= @who.title %></a>
+						<a href="#"><%= @about.title %></a>
+						<a href="#"><%= @involved.title %></a>
+					</div>	 -->
+					<div class="do-better">
+						<h3>We can do better illinois.</h3>
+					</div>	
+					
+				</div>
+			</div>
+			
+		</div>
+</section>
+<% end %>
+<nav>
+	<ul class="cd-vertical-nav">
+		<li><a href="#0" class="cd-prev inactive">Next</a></li>
+		<li><a href="#0" class="cd-next">Prev</a></li>
+	</ul>
+</nav> <!-- .cd-vertical-nav -->
 
-
-
-    <!--));le %>
-    <%= @about.headline %>
-    <%= @about.body %>
-    <%= @about.extras %>
-    <%= @about.picture %> -->
-
-<div class="facts">
-  <div class="fact-row" id="one">
-      <div class="row">
-		  <span class='wrap left'><div class="black"></div></span>
-		   <span class="text">
-    <% @facts.order(:id)[3..4].each  do |section| %>
-		 <span><%= section.preview %></span>
-    <% end %>
-	</span>
-		  <span class='wrap right'><div class="black"></div></span>
-      </div>
-  </div>
-  <div class="fact-row" id="two">
-      <div class="row">
-		  <span class='wrap left one'><div class="black"></div></span>
-		   <span class="text">
-    <% @facts[1..1].each  do |section| %>
-		 <span><%= section.preview %></span>
-    <% end %>
-	</span>
-		  <span class='wrap two right'><div class="black"></div></span>
-      </div>
-  </div>
-  <div class="fact-row" id="title">
-      <div class="row">
-		  <span class="text">
-    <% @facts.order(:id)[4..5].each do |section| %>
-		  <span><%= section.title %></span>
-    <% end %>
-	</span>
-      </div>
-  </div>
-  <div class="fact-row" id="three">
-      <div class="row">
-		  <span class="text">
-    <% @facts.order(:id)[2..2].each  do |section| %>
-		  <span><%= section.preview %></span>
-    <% end %>
-	</span>
-		  <span class='wrap right'><div class="black"></div></span>
-      </div>
-  </div>
-
-  <div class="fact-row" id="three">
-      <div class="row">
-		  <span class="text">
-    <% @facts.order(:id)[2..3].each  do |section| %>
-		  <span><%= section.preview %></span>
-    <% end %>
-	</span>
-		  <span class='wrap right'><div class="black"></div></span>
-      </div>
-  </div>
-  <div class="fact-row" id="two">
-      <div class="row">
-		  <span class='wrap left'><div class="black"></div></span>
-		   <span class="text">
-    <% @facts[1..1].each  do |section| %>
-		 <span><%= section.preview %></span>
-    <% end %>
-	</span>
-		  <span class='wrap two'><div class="black"></div></span>
-      </div>
-  </div>
-
-
-  </div>
-
-<div class="detail">
-	<div class="nav center"><h3 ><span class="black"></span><%= @who.title %></h3></div>
-	<div class="nav center"><h3  class=""><span class="black"></span><%= @about.title %></h3></div>
-	<div class="nav center"><h3  class=""><span class="black"></span><%= @involved.title %></div>
-</div>

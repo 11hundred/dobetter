@@ -1,33 +1,14 @@
-<p id="notice"><%= notice %></p>
+<div id="main-wrapper">
+	<div>
 
-<h1>Listing Abouts</h1>
+		<div class="interior-poster">
+			<p>The $721 billion economy of the Land of Lincoln is the fifth largest in the U.S. and larger than that of many independent nations. Yet Illinois has<span> more than 30,000 homeless children </span>with 46 out of 102 counties on the Poverty Watch or the Poverty Warning list.</p>
+<p>
+The Illinois budget stalemate is strangling the agencies that provide<span>  critical services </span>for children, families, and communities. Our leaders’<span>  indifference </span>to the suffering of Illinois’ most vulnerable residents<span>  has to stop now.</span> 
+</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Headline</th>
-      <th>Body</th>
-      <th>Extras</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+			
+		</div>	
 
-  <tbody>
-    <% @abouts.each do |about| %>
-      <tr>
-        <td><%= about.title %></td>
-        <td><%= about.headline %></td>
-        <td><%= about.body %></td>
-        <td><%= about.extras %></td>
-        <td><%= link_to 'Show', about %></td>
-        <td><%= link_to 'Edit', edit_about_path(about) %></td>
-        <td><%= link_to 'Destroy', about, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New About', new_about_path %>
+	</div>	
+</div>

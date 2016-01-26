@@ -39,6 +39,15 @@ h1,h2,h3,h4,h5,h6 {
  font-size:1em;
  line-height:1em;
 }
+h1 {
+    font-family: "Knockout 70 A", "Knockout 70 B";
+    font-style: normal;
+    font-weight: 400;
+	font-size: 3rem;
+	    text-transform: uppercase;
+	    word-wrap: break-word;
+	
+}
 h3 {
 	color:#ddd;
 	text-transform:uppercase;
@@ -65,9 +74,11 @@ h5 {
 }
 
 p {
-	font-family: "Gotham SSm A", "Gotham SSm B";
-	font-size:1.015em;
-	line-height:1.5em;
+	font-size:1.4em;
+	line-height:1.25em;
+	font-family: "Knockout 49 A", "Knockout 49 B";
+    font-style: normal;
+    font-weight: 400;
 }
 ul {
  list-style:none;
@@ -256,6 +267,7 @@ Main Components
 
 -------------------------------- */
 
+
 .side-col {
 	position:fixed;
 	left:0px;
@@ -267,10 +279,55 @@ Main Components
 	background-repeat:no-repeat;
 	background-position:right center;
 	p {
-		color:#fff;
+		color:#eee;
+		padding:0;
+		margin:0;
+		padding-right:20px;
+		span {
+			font-size:.9em;
+			font-family: "Knockout 33 A", "Knockout 33 B";
+			text-transform:uppercase;
+			margin-right:20px;
+			color:#EA9C28;
+		}
 	}
 	.interior-wrapper {
 		padding:25px;
+	
+		ul#nav {
+			padding-top:5px;
+			border-top:2px solid #111;
+			margin-top:30px;
+			li {
+				width:100%;
+				float:left;
+				padding:10px 0 0;
+				
+				a {
+					font-family: "Knockout 33 A", "Knockout 33 B";
+					font-style: normal;
+					font-weight: 400;
+					text-decoration:none;
+					font-size:1.5em;
+				}
+				a:hover {
+					background:none;
+				}
+				span {
+//					background:#EA9C28;
+//					width:20px;
+//					height:20px;
+//					float:left;
+//					margin-right:10px;
+//					border-radius:50%;
+					
+				}
+			}
+			li:first-child {
+				border-top:none;
+			}
+		}
+
 	}
 }
 
@@ -501,12 +558,6 @@ body[data-hijacking="on"] {
 
 
 	.poster h1 {
-	    font-family: "Knockout 70 A", "Knockout 70 B";
-	    font-style: normal;
-	    font-weight: 400;
-		font-size: 3rem;
-		    text-transform: uppercase;
-		    word-wrap: break-word;
 
 	}
 
@@ -558,6 +609,61 @@ body[data-hijacking="on"] {
 @include MQ(L) {
 	.cd-section:first-of-type > div::before {
 		display: none;
+	}
+}
+
+#main-wrapper > div {
+	
+	background-image: image-url('crumpled-paper.jpg');
+	background-repeat:repeat;
+	background-position:center;
+	background-size:cover;
+	min-height:100vh;
+
+
+	.interior-poster {
+		margin:40px;
+		width:600px;
+		min-height:400px;
+		padding:0 25px;
+		h1 {
+			text-align:center;
+		}
+		p.ruled {
+			font-family: "Gotham SSm A", "Gotham SSm B";
+			line-height:1.8em;
+			background-image: image-url('underline.png');
+			background-repeat:repeat;
+			background-position:0 0;
+			background-size:20px 35px;
+			padding-top: 35px;
+			margin:0;
+			
+			span {
+				background:#ffcc00;
+				background:rgba(255,204,0,.88);
+				padding: 10px 0;
+			}
+			
+		}
+	}
+	@include MQ(L) {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+
+		/* Force Hardware Acceleration */
+		@include transform(translateZ(0));
+		@include backface-visibility(hidden);
+
+		[data-hijacking="on"] & {
+			position: absolute;
+		}
+
+		[data-animation="rotate"] & {
+			@include transform-origin(center bottom);
+		}
 	}
 }
 
