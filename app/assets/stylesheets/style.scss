@@ -12,9 +12,6 @@ html, body {
  margin: 0px;
  padding: 0px;
  font-size:14px;
-background-image: image-url('craft-02.jpg');
-background-repeat:repeat;
-background-position:center;
  font-family: 'Verlag A', 'Verlag B'; font-weight: 200; font-style: normal;
  font-family: "Knockout 70 A", "Knockout 70 B";
  font-style: normal;
@@ -42,7 +39,36 @@ h1,h2,h3,h4,h5,h6 {
  font-size:1em;
  line-height:1em;
 }
+h3 {
+	color:#ddd;
+	text-transform:uppercase;
+	font-size:2em;
+	font-family: "Knockout 49 A", "Knockout 49 B";
+	font-style: normal;
+	font-weight: 400;
+}
+h4 {
+	color:#ccc;
+	text-transform:uppercase;
+	font-size:1.25em;
+	font-family: "Knockout 27 A", "Knockout 27 B";
+	font-style: normal;
+	font-weight: 400;
+}
+h5 {
+	color:#EA9C28;
+	text-transform:uppercase;
+	font-size:1em;
+	font-family: "Knockout 33 A", "Knockout 33 B";
+	font-style: normal;
+	font-weight: 400;
+}
 
+p {
+	font-family: "Gotham SSm A", "Gotham SSm B";
+	font-size:1.015em;
+	line-height:1.5em;
+}
 ul {
  list-style:none;
  margin:0;
@@ -230,6 +256,57 @@ Main Components
 
 -------------------------------- */
 
+.side-col {
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:350px;
+	height:100vh;
+	background:#222;
+	background-image: image-url('right-shadow.png');
+	background-repeat:no-repeat;
+	background-position:right center;
+	p {
+		color:#fff;
+	}
+	.interior-wrapper {
+		padding:25px;
+	}
+}
+
+.do-better{
+	background: #EA9C28;
+	    position: absolute;
+	    top: 50%;
+	    padding: 25px;
+	    width: 275px;
+	    height: 95px;
+	    left:200px;
+	    background-image: url(/assets/illinois-30b9611ceb12ca158fa91e276b21fc360da6b1aec3dad00e34750876245c3ac0.png);
+	    background-repeat: no-repeat;
+	    background-position: 10px center;
+	    background-size: 70px;
+	    -ms-transform: rotate(2deg);
+	    -webkit-transform: rotate(2deg);
+	    transform: rotate(2deg);
+	    border-top: 1px solid rgba(255, 255, 255, 0.2);
+	    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+	h3 {
+			position: relative;
+			    left: 70px;
+			    top: -8px;
+			    width: 220px;
+			    text-align: left;
+			    line-height: 25px;
+			    color: #fff;
+				text-transform:uppercase;
+				font-family: "Knockout 70 A", "Knockout 70 B";
+			    font-style: normal;
+			    font-weight: 400;
+			}
+
+}
 body[data-hijacking="on"] {
 	background-image: image-url('craft-02.jpg');
 	background-repeat:repeat;
@@ -243,6 +320,12 @@ body[data-hijacking="on"] {
 .cd-section {
 	height: 100vh;
 
+	 > div {
+		background-image: image-url('brick-wall.jpg');
+		background-repeat:repeat;
+		background-position:center;
+		background-size:cover;
+	}
 	h2 {
 		font-family: "Gotham SSm A", "Gotham SSm B";
 		font-style: normal;
@@ -251,41 +334,21 @@ body[data-hijacking="on"] {
 		text-transform:uppercase;
 		font-size:1rem;
 	}
-	.do-better{
-		background:#FBAF3F;
-		position:absolute;
-		bottom:250px;
-		padding:25px;
-		width: 325px;
-		height: 90px;
-		left:-100px;
-	    background-image: image-url('illinois.png');
-	    background-repeat: no-repeat;
-	    background-position: 10px center;
-		background-size:70px;
-	    -ms-transform: rotate(2deg); /* IE 9 */
-	    -webkit-transform: rotate(2deg); /* Chrome, Safari, Opera */
-	    transform: rotate(2deg);
-		border-top:1px solid rgba(255,255,255,0.2);
-		border-bottom:1px solid rgba(0,0,0,0.2);
-		box-shadow:1px 2px 2px rgba(0,0,0,0.2);
+	
+	.poster {
+	    -ms-transform: rotate(-1deg); /* IE 9 */
+	    -webkit-transform: rotate(-1deg); /* Chrome, Safari, Opera */
+	    transform: rotate(-1deg);
 
-		h3 {
-				position: relative;
-				    left: 70px;
-				    top: -8px;
-				    font-size: 30px;
-				    width: 220px;
-				    text-align: left;
-				    line-height: 25px;
-				    color: #fff;
-					text-transform:uppercase;
-				    font-family: "Knockout 70 A", "Knockout 70 B";
-				    font-style: normal;
-				    font-weight: 400;
-				}
+		.do-better{
+		    left:200px;
+		    -ms-transform: rotate(-1deg); /* IE 9 */
+		    -webkit-transform: rotate(-1deg); /* Chrome, Safari, Opera */
+		    transform: rotate(-1deg);
+		}
 
 	}
+
 	.poster-nav {
 		top:375px;
 		border-top:5px solid #111;
@@ -307,15 +370,25 @@ body[data-hijacking="on"] {
 	}
 
 	&:first-of-type > div {
-		background-image: image-url('craft-02.jpg');
+		background-image: image-url('brick-wall.jpg');
 		background-repeat:repeat;
 		background-position:center;
-		.do-better{
-			left:85px;
+	
+		.poster {
 		    -ms-transform: rotate(-1deg); /* IE 9 */
 		    -webkit-transform: rotate(-1deg); /* Chrome, Safari, Opera */
 		    transform: rotate(-1deg);
+
+			.do-better{
+			    left:200px;
+			    -ms-transform: rotate(-1deg); /* IE 9 */
+			    -webkit-transform: rotate(-1deg); /* Chrome, Safari, Opera */
+			    transform: rotate(-1deg);
+			}
+
 		}
+	
+	
 
 		&::before {
 			/* alert -> all scrolling effects are not visible on small devices */
@@ -336,11 +409,19 @@ body[data-hijacking="on"] {
 		background-image: image-url('craft-01.jpg');
 		background-repeat:repeat;
 		background-position:center;
-		.do-better{
+		.poster {
 		    -ms-transform: rotate(2deg); /* IE 9 */
 		    -webkit-transform: rotate(2deg); /* Chrome, Safari, Opera */
 		    transform: rotate(2deg);
+			.do-better{
+			    left:200px;
+			    -ms-transform: rotate(-1deg); /* IE 9 */
+			    -webkit-transform: rotate(-1deg); /* Chrome, Safari, Opera */
+			    transform: rotate(-1deg);
+			}
+
 		}
+
 
 	}
 
@@ -348,11 +429,16 @@ body[data-hijacking="on"] {
 		background-image: image-url('craft-02.jpg');
 		background-repeat:repeat;
 		background-position:center;
-		.do-better{
-		    left: 200px;
+		.poster {
 		    -ms-transform: rotate(-1deg); /* IE 9 */
 		    -webkit-transform: rotate(-1deg); /* Chrome, Safari, Opera */
 		    transform: rotate(-1deg);
+			.do-better{
+			    left:-10px;
+			    -ms-transform: rotate(1deg); /* IE 9 */
+			    -webkit-transform: rotate(1deg); /* Chrome, Safari, Opera */
+			    transform: rotate(1deg);
+			}
 		}
 	}
 
@@ -480,7 +566,7 @@ body[data-hijacking="on"] {
 	@include MQ(L) {
 		position: fixed;
 		top: 0;
-		left: 0;
+		right: 0;
 		width: 100%;
 
 		/* Force Hardware Acceleration */
@@ -532,4 +618,58 @@ body[data-hijacking="on"] {
 	@include MQ(L) {
 		display: block;
 	}
+}
+
+.contacts {
+	position:absolute;
+	bottom:0px;
+	width:100%;
+	padding:25px;
+	border-top:2px solid #111;
+	h4 {
+		color:#EA9C28;
+	}
+	
+	ul {
+		li {
+			width:30px;
+			height:30px;
+			float:left;
+			position:relative;
+			background-repeat:repeat;
+			background-position:center;
+			background-size:cover;
+			
+			
+			a {
+				position:absolute;
+				left:0px;
+				top:0px;
+				width:100%;
+				height:100%;
+				text-indent:-999em;
+				
+			}
+		}
+		li#instagram {
+			background-image: image-url('social-media/instagram_icon.png');
+		}
+		li#pinterest {
+			background-image: image-url('social-media/pinterest_icon.png');
+		}
+		li#twitter {
+			background-image: image-url('social-media/twitter_icon.png');
+		}
+		li#facebook {
+			background-image: image-url('social-media/facebook_icon.png');
+		}
+	}
+	
+	.partnership {
+		float:left;
+		width:100%;
+		margin-top:20px;
+	}
+	
+	
 }

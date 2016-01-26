@@ -1,10 +1,10 @@
-$(window).load(function(){
-		$('#title span:nth-child(1)').after('<div class="site-title"><div class="illinois"></div><h3>We can do better illinois.</h3></div>')
-});
 
 
 $(document).ready(function () {
 		var $divs = $(".facts > div");
+		var windowWidth = $(window).width();   
+
+		$('.cd-section > div').css({width:windowWidth -350 });
 
 		var interval = setInterval(function () {
 				var $ds = $divs.not(".flipped");
@@ -17,7 +17,21 @@ $(document).ready(function () {
 
 		}, 500);
 
+
+
+		if( $(window).width() < 1140){
+			$('.cd-section > div').css({width:windowWidth -350 });
+		}
+		if( $(window).width() > 1140)
+		{
+			$('.cd-section > div').css({width:windowWidth -350 });
+		}
+
+
 	});
+	
+	
+	
 
 jQuery(document).ready(function($){
 		//variables

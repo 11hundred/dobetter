@@ -1,3 +1,4 @@
+
 <% @facts.each_with_index do |fact, index| %>
 <section class="cd-section<% if index == 0 %> visible<% end %>">
 		<div>
@@ -5,13 +6,13 @@
 				<div class="poster">
 					<h2>STATE OF THE STATE</h2>
 					<h1>FACT: <%= fact.title  %></h1>
-					<div class="do-better">
-						<h3>We can do better illinois.</h3>
-					</div>	
-					<div class="poster-nav">
+					<!-- <div class="poster-nav">
 						<a href="#"><%= @who.title %></a>
 						<a href="#"><%= @about.title %></a>
 						<a href="#"><%= @involved.title %></a>
+					</div>	 -->
+					<div class="do-better">
+						<h3>We can do better illinois.</h3>
 					</div>	
 					
 				</div>

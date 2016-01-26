@@ -10,6 +10,28 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 </head>
 <body data-hijacking="off" data-animation="fixed">
+<div class="side-col">
+	<div class="interior-wrapper">
+		<h3><%= @who.title %></h3>
+		<p><%= @who.body %></p>
+	<h4><%= @about.title %></h4>
+	<h4><%= @involved.title %></h4>
+	
+	</div>	
+	
+	<div class="contacts">
+		<ul>
+			<li id="instagram"><a href="instagram.com/wecandobetteril">Instagram</a></li>
+			<li id="facebook"><a href="facebook.com/wecandobetteril">Facebook</a></li>
+			<li id="pinterest"><a href="pinterest.com/wecandobetteril">Pinterest</a></li>
+			<li id="twitter"><a href="twitter.com/wecandobetteril">Twitter</a></li>
+		</ul>
+		<div class="partnership">
+			<h5>In partnership with:</h5>
+		</div>	
+	</div>	
+	
+</div>	
 
 <%= yield %>
 

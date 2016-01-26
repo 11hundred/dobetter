@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :abouts
 
   get("/", :controller  => "sections", :action => "index")
+  get("/who", :controller  => "abouts", :action => "index")
 
 
   # The priority is based upon order of creation: first created -> highest priority.
