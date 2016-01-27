@@ -10,8 +10,8 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 </head>
 <body data-hijacking="off" data-animation="fixed">
-<div class="side-col">
 <% if current_page?('/') %>
+<div class="side-col">
 	<div class="interior-wrapper">
 		<!-- <h3><%= @who.title %></h3> -->
 		<p><span><%= @who.title %></span><%= @who.body %></p>	
@@ -21,6 +21,7 @@
 		</ul>
 	</div>	
 <% elsif current_page?('/whats-the-issue') %>
+<div class="side-col">
 	<div class="interior-wrapper">
 		<ul id="nav">
 			<li><span></span><a href="/">Who are We?</a></li>
@@ -30,6 +31,7 @@
 	
 	</div>	
 <% elsif current_page?('/get-involved') %>
+<div class="side-col">
 	<div class="interior-wrapper">
 		<ul id="nav">
 	<li><span></span><a href="/">Who are We?</a></li>
@@ -39,14 +41,15 @@
 	
 	</div>	
 <% elsif current_page?('/facts') %>
-	<div class="interior-wrapper">
-	<p><span><%= @who.title %></span><%= @who.body %></p>	
+<!--<div class="side-col">
+	 <div class="interior-wrapper">
+	<p><span><%= @who.title %></span><%= @who.body %></p>
 		<ul id="nav">
 			<li><span></span><a href="/">Who are We?</a></li>
 			<li><span></span><a href="/whats-the-issue">What is the issue?</a></li>
 			<li><span></span><a href="/get-involved">Get Involved</a></li>
 		</ul>
-	</div>	
+	</div>	 -->
 <% end %>
 	
 	<div class="contacts">

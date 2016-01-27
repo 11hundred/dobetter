@@ -1,11 +1,12 @@
+var windowWidth = $(window).width();   
+$('#main-wrapper > div').css({width:windowWidth -350 });
+$('.cd-section > div').css({width:windowWidth -350 });
+
 
 
 $(document).ready(function () {
 		var $divs = $(".facts > div");
-		var windowWidth = $(window).width();   
 
-		$('#main-wrapper > div').css({width:windowWidth -350 });
-		$('.cd-section > div').css({width:windowWidth -350 });
 
 		var interval = setInterval(function () {
 				var $ds = $divs.not(".flipped");
@@ -19,16 +20,6 @@ $(document).ready(function () {
 		}, 500);
 
 
-
-		if( $(window).width() < 1140){
-			$('#main-wrapper > div').css({width:windowWidth -350 });
-			$('.cd-section > div').css({width:windowWidth -350 });
-		}
-		if( $(window).width() > 1140)
-		{
-			$('#main-wrapper > div').css({width:windowWidth -350 });
-			$('.cd-section > div').css({width:windowWidth -350 });
-		}
 
 
 	});
