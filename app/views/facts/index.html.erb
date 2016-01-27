@@ -1,5 +1,5 @@
 
-<% @facts.each_with_index do |fact, index| %>
+<% @facts.order(:id).each_with_index do |fact, index| %>
 <section class="cd-section<% if index == 0 %> visible<% end %>">
 		<div>
 			<div class="poster-content">

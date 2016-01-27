@@ -1,10 +1,10 @@
 
-<% @facts.each_with_index do |fact, index| %>
+<% @facts.order(:id).each_with_index do |fact, index| %>
 <section class="cd-section<% if index == 0 %> visible<% end %>">
 		<div>
 			<div class="poster-content">
 				<div class="poster">
-					<h2>STATE OF THE STATE</h2>
+					<h2>THE REAL STATE OF THE STATE</h2>
 					<h1>FACT: <%= fact.title  %></h1>
 					<!-- <div class="poster-nav">
 						<a href="#"><%= @who.title %></a>
