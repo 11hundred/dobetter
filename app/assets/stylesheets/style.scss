@@ -266,79 +266,11 @@ span.wrap.right .black {
 Main Components
 
 -------------------------------- */
-
-
-.side-col {
-	position:fixed;
-	left:0px;
-	top:0px;
-	width:350px;
-	height:100vh;
-	background:#222;
-	background-image: image-url('right-shadow.png');
-	background-repeat:no-repeat;
-	background-position:right center;
-	p {
-		color:#eee;
-		padding:0;
-		margin:0;
-		padding-right:20px;
-		span {
-			font-size:.9em;
-			font-family: "Knockout 33 A", "Knockout 33 B";
-			text-transform:uppercase;
-			margin-right:20px;
-			color:#EA9C28;
-		}
-	}
-	.interior-wrapper {
-		padding:25px;
-	
-		ul#nav {
-			padding-top:5px;
-			border-top:2px solid #111;
-			margin-top:30px;
-			li {
-				width:100%;
-				float:left;
-				padding:10px 0 0;
-				
-				a {
-					font-family: "Knockout 33 A", "Knockout 33 B";
-					font-style: normal;
-					font-weight: 400;
-					text-decoration:none;
-					font-size:1.5em;
-				}
-				a:hover {
-					background:none;
-				}
-				span {
-//					background:#EA9C28;
-//					width:20px;
-//					height:20px;
-//					float:left;
-//					margin-right:10px;
-//					border-radius:50%;
-					
-				}
-			}
-			li:first-child {
-				border-top:none;
-			}
-		}
-
-	}
-}
-
 .do-better{
 	background: #EA9C28;
-	    position: absolute;
-	    top: 50%;
 	    padding: 25px;
 	    width: 335px;
 	    height: 95px;
-	    left:200px;
 	    background-image: url(/assets/illinois-30b9611ceb12ca158fa91e276b21fc360da6b1aec3dad00e34750876245c3ac0.png);
 	    background-repeat: no-repeat;
 	    background-position: 10px center;
@@ -364,6 +296,83 @@ Main Components
 			}
 
 }
+
+.side-col {
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:350px;
+	height:100vh;
+	background:#222;
+	background-image: image-url('right-shadow.png');
+	background-repeat:no-repeat;
+	background-position:right center;
+	z-index:9;
+	p {
+		color:#eee;
+		padding:0;
+		margin:0;
+		padding-right:20px;
+		span {
+			font-size:.9em;
+			font-family: "Knockout 33 A", "Knockout 33 B";
+			text-transform:uppercase;
+			margin-right:20px;
+			color:#EA9C28;
+		}
+	}
+	.interior-wrapper {
+		padding:25px;
+		
+		.do-better {
+		    transform: rotate(-1.3deg);
+		    left: -40px;
+		    position: relative;
+		}
+	
+		ul#nav {
+			padding-top:5px;
+			border-top:2px solid #111;
+			margin-top:30px;
+			li {
+				width:100%;
+				float:left;
+				padding:10px 0 0;
+				
+				a {
+					font-family: "Knockout 33 A", "Knockout 33 B";
+					font-style: normal;
+					font-weight: 400;
+					text-decoration:none;
+					font-size:1.5em;
+					text-transform:uppercase;
+				}
+				a:hover {
+					background:none;
+				}
+				span {
+//					background:#EA9C28;
+//					width:20px;
+//					height:20px;
+//					float:left;
+//					margin-right:10px;
+//					border-radius:50%;
+					
+				}
+			}
+			li.active a {
+					color:#EA9C28;
+				
+			}
+			li:first-child {
+				border-top:none;
+			}
+		}
+
+	}
+}
+
+
 body[data-hijacking="on"] {
 	background-image: image-url('craft-02.jpg');
 	background-repeat:repeat;
@@ -398,6 +407,9 @@ body[data-hijacking="on"] {
 	    transform: rotate(-1deg);
 
 		.do-better{
+		    position: absolute;
+		    top: 50%;
+		    left:200px;
 		    left:200px;
 		    -ms-transform: rotate(-1deg); /* IE 9 */
 		    -webkit-transform: rotate(-1deg); /* Chrome, Safari, Opera */
@@ -463,9 +475,9 @@ body[data-hijacking="on"] {
 	}
 
 	&:nth-of-type(2) > div {
-		background-image: image-url('craft-01.jpg');
+		background-image: image-url('brick-wall.jpg');
 		background-repeat:repeat;
-		background-position:center;
+		background-position:left center;
 		.poster {
 		    -ms-transform: rotate(2deg); /* IE 9 */
 		    -webkit-transform: rotate(2deg); /* Chrome, Safari, Opera */
@@ -483,9 +495,9 @@ body[data-hijacking="on"] {
 	}
 
 	&:nth-of-type(3) > div {
-		background-image: image-url('craft-02.jpg');
+		background-image: image-url('brick-wall.jpg');
 		background-repeat:repeat;
-		background-position:center;
+		background-position:right bottom;
 		.poster {
 		    -ms-transform: rotate(-1deg); /* IE 9 */
 		    -webkit-transform: rotate(-1deg); /* Chrome, Safari, Opera */
@@ -500,9 +512,9 @@ body[data-hijacking="on"] {
 	}
 
 	&:nth-of-type(4) > div {
-		background-image: image-url('craft-01.jpg');
+		background-image: image-url('brick-wall.jpg');
 		background-repeat:repeat;
-		background-position:center;
+		background-position:left top;
 		.do-better{
 		    left:-10px;
 		    -ms-transform: rotate(1deg); /* IE 9 */
@@ -512,9 +524,9 @@ body[data-hijacking="on"] {
 	}
 
 	&:nth-of-type(5) > div {
-		background-image: image-url('craft-02.jpg');
+		background-image: image-url('brick-wall.jpg');
 		background-repeat:repeat;
-		background-position:center;
+		background-position:right center;
 		.do-better{
 		    -ms-transform: rotate(1.4deg); /* IE 9 */
 		    -webkit-transform: rotate(1.4deg); /* Chrome, Safari, Opera */
@@ -522,14 +534,14 @@ body[data-hijacking="on"] {
 		}
 	}
 	&:nth-of-type(6) > div {
-		background-image: image-url('craft-01.jpg');
+		background-image: image-url('brick-wall.jpg');
 		background-repeat:repeat;
-		background-position:center;
+		background-position:left top;
 	}
 	&:nth-of-type(7) > div {
-		background-image: image-url('craft-01.jpg');
+		background-image: image-url('brick-wall.jpg');
 		background-repeat:repeat;
-		background-position:center;
+		background-position:left center;
 	}
 
 
@@ -641,7 +653,7 @@ body[data-hijacking="on"] {
 			
 			span {
 				background:#ffcc00;
-				background:rgba(255,204,0,.88);
+				background:rgba(234, 156, 40, 0.85);
 				padding: 10px 0;
 			}
 			
