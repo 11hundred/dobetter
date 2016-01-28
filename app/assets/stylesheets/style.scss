@@ -8,7 +8,6 @@
 }
 
 html, body {
-	overflow-x:hidden;
  height: 100%;
  margin: 0px;
  padding: 0px;
@@ -426,6 +425,10 @@ body[data-hijacking="on"] {
 		    -ms-transform: rotate(-1deg); /* IE 9 */
 		    -webkit-transform: rotate(-1deg); /* Chrome, Safari, Opera */
 		    transform: rotate(-1deg);
+			display:none;
+			@include MQ(L) {
+				display: block;
+			}
 		}
 
 	}
