@@ -1,8 +1,14 @@
 
 
+
 $(window).bind("load resize", function() {
 	var windowWidth = $(window).width();   
-	$('.cd-section > div').css({width:windowWidth -350 });
+
+	if( $(window).width() > 950)
+	{
+		$('#main-wrapper > div').css({width:windowWidth -350 });
+		$('.cd-section > div').css({width:windowWidth -350 });
+	}
 });
 
 

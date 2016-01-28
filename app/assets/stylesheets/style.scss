@@ -57,12 +57,13 @@ h3 {
 	font-weight: 400;
 }
 h4 {
-	color:#ccc;
+	color:#111;
 	text-transform:uppercase;
-	font-size:1.25em;
-	font-family: "Knockout 27 A", "Knockout 27 B";
+	font-size:1.1em;
+	font-family: "Gotham SSm A", "Gotham SSm B";
 	font-style: normal;
 	font-weight: 400;
+	padding:10px 0;
 }
 h5 {
 	color:#EA9C28;
@@ -634,6 +635,37 @@ body[data-hijacking="on"] {
 		width:auto;
 		min-height:400px;
 		padding:0 25px;
+		padding-bottom:50px;
+		
+		h2 {
+			font-family: "Knockout 49 A", "Knockout 49 B";
+		    font-style: normal;
+		    font-weight: 400;
+			font-size: 2.5rem;
+			padding-bottom:20px;
+			margin:20px 0;
+			border-bottom:2px solid rgba(0,0,0,0.2);
+			span
+			{
+				font-size: 1.5rem;
+				display:block;
+				width:100%;
+				text-transform:uppercase;
+			    font-family: "Knockout 70 A", "Knockout 70 B";
+			}
+		}
+		
+		h4 {
+			padding-top:20px;
+		}
+		
+		ul {
+			list-style:disc;
+			padding-right:40px;
+			padding-left:20px;
+			padding-bottom:10px;
+			display:inline-block;
+		}
 		
 		@include MQ(L) {
 			margin:40px;
@@ -641,6 +673,9 @@ body[data-hijacking="on"] {
 		}
 		h1 {
 			text-align:center;
+		}
+		p {
+			
 		}
 		p.ruled {
 			font-family: "Gotham SSm A", "Gotham SSm B";
