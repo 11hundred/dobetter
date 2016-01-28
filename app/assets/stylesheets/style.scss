@@ -869,11 +869,29 @@ body[data-hijacking="on"] {
 	    z-index: 99;
 	    height: 75px;
 		
+		.menu {
+			position:absolute;
+			left:10px;
+			top:10px;
+			width:50px;
+			height:50px;
+			background-image: image-url('hamburger.png');
+			background-size:40px;
+			background-position:center;
+			background-repeat:no-repeat;
+		}
 		h3 {
-			padding:25px 30px;
+			padding:25px 30px 25px 150px;
 			color:#EA9C28;
 			font-size:1.75rem;
 			line-height:1em;
+			width:40px;
+			
+			text-indent:-999em;
+			background-image: image-url('illinois-white.png');
+			background-size:40px;
+			background-position:center;
+			background-repeat:no-repeat;
 		}
 		
 		@include MQ(L) {
