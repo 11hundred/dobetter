@@ -453,6 +453,9 @@ body[data-hijacking="on"] {
 		a:hover {
 			color:#111;
 		}
+		@include MQ(L) {
+			display: none;
+		}
 		
 	}
 
