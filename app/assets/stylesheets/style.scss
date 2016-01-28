@@ -895,6 +895,25 @@ body[data-hijacking="on"] {
 	}
 
 	.poster {
+		
+		h3.mobile {
+			@include MQ(S) {
+				border-top:2px solid #111;
+				padding-top:20px;
+				margin-top:20px;
+				color:#EA9C28;
+			}
+			@include MQ(M) {
+				color:#EA9C28;
+				border-top:2px solid #111;
+				padding-top:20px;
+				margin-top:20px;
+			}
+			@include MQ(L) {
+				display:none;
+			}
+			
+		}
 	
 	h1 {
 	    font-family: "Knockout 70 A", "Knockout 70 B";
@@ -919,13 +938,13 @@ body[data-hijacking="on"] {
 	    width: 300px;
 	    height: 500px;
 	    margin-left: -150px;
-	    margin-top: -250px;
+	    margin-top: -300px;
 	}
 	@include MQ(M) {
 	    width: 300px;
 	    height: 500px;
 	    margin-left: -150px;
-	    margin-top: -250px;
+	    margin-top: -300px;
 	}
 	@include MQ(L) {
 		width:400px;
