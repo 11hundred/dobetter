@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   resources :abouts
 
   get("/", :controller  => "sections", :action => "index")
-  get("/who", :controller  => "abouts", :action => "index")
+  get("/who", :controller  => "abouts", :action => "who")
   get("/whats-the-issue", :controller  => "abouts", :action => "index")
   get("/get-involved", :controller  => "participations", :action => "index")
   get("/get-involved/facts", :controller  => "participations", :action => "facts")

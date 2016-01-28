@@ -877,7 +877,13 @@ body[data-hijacking="on"] {
 				display:block;
 				padding:20px 0 0 0;
 				a {
+				    font-family: "Knockout 70 A", "Knockout 70 B";
+				    font-style: normal;
+				    font-weight: 400;
+					font-size:3rem;
+					text-decoration:none;
 					padding:0px 20px 0 20px;
+					color:#fff;
 				}
 				a:hover {
 					background:none;
