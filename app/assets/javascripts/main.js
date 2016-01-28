@@ -35,7 +35,7 @@ $(document).ready(function () {
 	
 	$(window).scroll(function(){
 	
-	    if ($(window).scrollTop() >= 120) {
+	    if ($(window).scrollTop() >= 50) {
 	        $('.scroll').addClass('scrolled');
 	    }
 	    else {

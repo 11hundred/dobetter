@@ -433,23 +433,27 @@ body[data-hijacking="on"] {
 	}
 
 	.poster-nav {
-		top:375px;
-		border-top:5px solid #111;
+		bottom:75px;
 		padding-top:10px;
-		width:350px;
-		position:absolute;
+		width:auto;
+		position:relative;
+		margin-top:100px;
 		a {
 			text-transform:uppercase;
 			text-decoration:none;
 			width:100%;
-			font-size: 1.15em;
+			    font-size: 1.5rem;
 			    float: left;
-			    font-family: "Ziggurat A", "Ziggurat B";
+			    font-family: "Knockout 49 A", "Knockout 49 B";
 			    font-style: normal;
-			    font-weight: 800;
+			    font-weight: 400;;
 			    padding: 5px 0;
 			    letter-spacing: 0.05em;
 		}
+		a:hover {
+			color:#111;
+		}
+		
 	}
 
 	&:first-of-type > div {
