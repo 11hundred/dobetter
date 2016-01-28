@@ -17,9 +17,15 @@
 						<div class="menu">
 						</div>	
 						<ul>
-			<li><span></span><a href="/who">Who are We?</a></li>
-			<li><span></span><a href="/whats-the-issue">What is the issue?</a></li>
-			<li><span></span><a href="/get-involved">Get Involved</a></li>
+							<% if current_page?('/') %>
+								<li class="active"><span></span><a href="/">Home</a></li>
+							<% elsif  %>
+								<li><span></span><a href="/">Home</a></li>
+							<% end %>
+							
+								<li><span></span><a href="/who">Who are We?</a></li>
+								<li><span></span><a href="/whats-the-issue">What is the issue?</a></li>
+								<li><span></span><a href="/get-involved">Get Involved</a></li>
 							
 						</ul>	
 </div>		

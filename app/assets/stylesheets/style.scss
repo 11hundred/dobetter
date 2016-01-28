@@ -889,6 +889,12 @@ body[data-hijacking="on"] {
 					background:none;
 				}
 			}
+			li.active {
+				a {
+					color:#EA9C28;
+				}
+			}
+			
 		}
 		.menu {
 			position:absolute;
