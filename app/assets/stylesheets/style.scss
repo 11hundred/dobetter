@@ -915,6 +915,9 @@ body[data-hijacking="on"] {
 }
 
 .mobile-nav.click {
+	.menu {
+		background-image: image-url('close.png');
+	}
 	ul {
 		height:100vh;
 		background:#111;
