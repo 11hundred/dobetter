@@ -298,11 +298,12 @@ Main Components
 }
 
 .side-col {
-	position:fixed;
+	display:none;
+	position:relative;
 	left:0px;
 	top:0px;
-	width:350px;
-	height:100vh;
+	width:100%;
+	height:50vh;
 	background:#222;
 	background-image: image-url('right-shadow.png');
 	background-repeat:no-repeat;
@@ -368,6 +369,15 @@ Main Components
 				border-top:none;
 			}
 		}
+
+	}
+	@include MQ(L) {
+		position:fixed;
+		left:0px;
+		top:0px;
+		width:350px;
+		height:100vh;
+		display:block;
 
 	}
 }
@@ -459,19 +469,6 @@ body[data-hijacking="on"] {
 	
 	
 
-		&::before {
-			/* alert -> all scrolling effects are not visible on small devices */
-			content: 'Effects not visible on mobile!';
-			position: absolute;
-			width: 100%;
-			text-align: center;
-			top: 20px;
-			z-index: 2;
-			font-weight: bold;
-			font-size: 1.3rem;
-			text-transform: uppercase;
-			color: tint($color-1, 30%);
-		}
 	}
 
 	&:nth-of-type(2) > div {
@@ -547,8 +544,9 @@ body[data-hijacking="on"] {
 
 	.poster-content {
 		position:relative;
-		height:100vh;
 		width:100%;
+			height:100vh;
+		
 	}
 
 	.poster {
@@ -623,21 +621,24 @@ body[data-hijacking="on"] {
 		display: none;
 	}
 }
-
-#main-wrapper > div {
-	
+#main-wrapper  {
+	float:left;
+	width:100%;
+	min-height:100vh;
 	background-image: image-url('crumpled-paper.jpg');
 	background-repeat:repeat;
 	background-position:center;
 	background-size:cover;
-	min-height:100vh;
-
-
 	.interior-poster {
-		margin:40px;
-		width:600px;
+		margin:10px;
+		width:auto;
 		min-height:400px;
 		padding:0 25px;
+		
+		@include MQ(L) {
+			margin:40px;
+			padding:0 25px;
+		}
 		h1 {
 			text-align:center;
 		}
@@ -660,10 +661,12 @@ body[data-hijacking="on"] {
 		}
 	}
 	@include MQ(L) {
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 100%;
+		padding-left:350px;
+		
+		.interior-poster {
+				margin:40px;
+				max-width:600px;
+		}
 
 		/* Force Hardware Acceleration */
 		@include transform(translateZ(0));
@@ -739,6 +742,7 @@ body[data-hijacking="on"] {
 }
 
 .contacts {
+	display:none;
 	position:absolute;
 	bottom:0px;
 	width:100%;
@@ -787,6 +791,27 @@ body[data-hijacking="on"] {
 		float:left;
 		width:100%;
 		margin-top:20px;
+	}
+	@include MQ(L) {
+		display: block;
+	}
+	
+	
+}
+
+
+.contacts.bottom {
+	display:block;
+	position:fixed;
+	bottom:0px;
+	width:100%;
+	padding:10px 25px;
+	background:#111;
+	z-index:999;
+	border-top:none;
+
+	@include MQ(L) {
+		display: none;
 	}
 	
 	
