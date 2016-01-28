@@ -883,7 +883,37 @@ body[data-hijacking="on"] {
 
 
 
-.cd-section .poster {
+.cd-section {
+	@include MQ(S) {
+	    padding-top: 75px;
+	}
+	@include MQ(M) {
+	    padding-top: 75px;
+	}
+	@include MQ(L) {
+
+	}
+
+	.poster {
+	
+	h1 {
+	    font-family: "Knockout 70 A", "Knockout 70 B";
+	    font-style: normal;
+	    font-weight: 400;
+		    text-transform: uppercase;
+		    word-wrap: break-word;
+	
+			@include MQ(S) {
+				font-size: 2rem;
+			}
+			@include MQ(M) {
+				font-size: 2rem;
+			}
+			@include MQ(L) {
+				font-size: 3rem;
+			}
+	}
+	
 
 	@include MQ(S) {
 	    width: 300px;
@@ -904,5 +934,7 @@ body[data-hijacking="on"] {
 		margin-top:-300px;
 	}
 
+
+}
 
 }
