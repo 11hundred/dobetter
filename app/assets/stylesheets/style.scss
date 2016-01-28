@@ -32,7 +32,6 @@ html, body {
        }
    }
 }
-
 h1,h2,h3,h4,h5,h6 {
  margin:0;
  padding:0;
@@ -869,6 +868,22 @@ body[data-hijacking="on"] {
 	    z-index: 99;
 	    height: 75px;
 		
+		ul {
+			height:0vh;
+			background:#111;
+			overflow:hidden;
+			li {
+				width:100%;
+				display:block;
+				padding:20px 0 0 0;
+				a {
+					padding:0px 20px 0 20px;
+				}
+				a:hover {
+					background:none;
+				}
+			}
+		}
 		.menu {
 			position:absolute;
 			left:10px;
@@ -899,7 +914,12 @@ body[data-hijacking="on"] {
 		}
 }
 
-
+.mobile-nav.click {
+	ul {
+		height:100vh;
+		background:#111;
+	}
+}
 
 .cd-section {
 	@include MQ(S) {
@@ -976,4 +996,10 @@ body[data-hijacking="on"] {
 
 }
 
+}
+
+
+a:hover {
+	background:none;
+	text-decoration:none;
 }

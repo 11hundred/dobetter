@@ -7,7 +7,9 @@ $(window).bind("load resize", function() {
 	}
 });
 
-
+$(".menu").bind("click", function( e ) {
+	$('.mobile-nav').addClass("click");
+});
 
 
 $(document).ready(function () {
