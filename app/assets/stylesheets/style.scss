@@ -645,8 +645,9 @@ body[data-hijacking="on"] {
 		margin:10px;
 		width:auto;
 		min-height:400px;
-		padding:0 25px;
+		padding:0 40px 0 10px;
 		padding-bottom:50px;
+		
 		
 		h2 {
 			font-family: "Knockout 49 A", "Knockout 49 B";
@@ -691,8 +692,9 @@ body[data-hijacking="on"] {
 		p.ruled {
 			font-family: "Gotham SSm A", "Gotham SSm B";
 			margin:0;
-			line-height:1.4em;
+			line-height:1.65em;
 			font-size:1.2rem;
+			color:rgba(0,0,0,0.8);
 			@include MQ(L) {
 				font-size:1.4rem;
 				line-height:1.8em;
