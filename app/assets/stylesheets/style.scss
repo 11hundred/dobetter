@@ -690,18 +690,27 @@ body[data-hijacking="on"] {
 		}
 		p.ruled {
 			font-family: "Gotham SSm A", "Gotham SSm B";
-			line-height:1.8em;
-			background-image: image-url('underline.png');
-			background-repeat:repeat;
-			background-position:0 0;
-			background-size:20px 35px;
-			padding-top: 35px;
 			margin:0;
+			line-height:1.4em;
+			font-size:1.2rem;
+			@include MQ(L) {
+				font-size:1.4rem;
+				line-height:1.8em;
+				background-image: image-url('underline.png');
+				background-repeat:repeat;
+				background-position:0 0;
+				background-size:20px 35px;
+				padding-top: 35px;
+			}
 			
 			span {
 				background:#ffcc00;
 				background:rgba(234, 156, 40, 0.85);
-				padding: 10px 0;
+				padding: 3px 0;
+				@include MQ(L) {
+					padding: 10px 0;
+				}
+				
 			}
 			
 		}
