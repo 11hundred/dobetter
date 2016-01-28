@@ -884,6 +884,7 @@ body[data-hijacking="on"] {
 					text-decoration:none;
 					padding:0px 20px 0 20px;
 					color:#fff;
+					text-transform:uppercase;
 				}
 				a:hover {
 					background:none;
@@ -1017,4 +1018,34 @@ body[data-hijacking="on"] {
 a:hover {
 	background:none;
 	text-decoration:none;
+}
+
+
+.scroll {
+    position: fixed;
+    bottom: 50px;
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    z-index: 9;
+    text-align: center;
+    padding: 10px 0px;
+	display:block;
+	-webkit-transition: all .575s;
+	-moz-transition: all .575s;
+	-o-transition: all .575s;
+	transition: all .575s;
+	h4{
+		color:#fff;
+	}
+	@include MQ(L) {
+		display:none;
+	}
+	
+}
+.scroll.scrolled {
+	bottom:-20px;
+	-webkit-transition: all .575s;
+	-moz-transition: all .575s;
+	-o-transition: all .575s;
+	transition: all .575s;
 }

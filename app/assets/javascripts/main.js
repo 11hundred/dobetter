@@ -33,6 +33,16 @@ $(document).ready(function () {
 	});
 	
 	
+	$(window).scroll(function(){
+	
+	    if ($(window).scrollTop() >= 120) {
+	        $('.scroll').addClass('scrolled');
+	    }
+	    else {
+	        $('.scroll').removeClass('scrolled');
+	    }
+
+	});
 	
 
 jQuery(document).ready(function($){
